@@ -43,7 +43,7 @@ class MapfitMap internal constructor(
             else -> mapController.setPositionEased(
                 latLng,
                 duration.toInt(),
-                MapView.DEFAULT_EASE,
+                mapController.DEFAULT_EASE_TYPE,
                 true
             )
         }
@@ -374,7 +374,7 @@ class MapfitMap internal constructor(
     ) {
         when (duration) {
             0L -> mapController.rotation = rotation
-            else -> mapController.setRotationEased(rotation, duration.toInt(), MapView.DEFAULT_EASE)
+            else -> mapController.setRotationEased(rotation, duration.toInt(),  mapController.DEFAULT_EASE_TYPE)
         }
     }
 
@@ -391,7 +391,7 @@ class MapfitMap internal constructor(
     ) {
         when (duration) {
             0L -> mapController.tilt = angle
-            else -> mapController.setTiltEased(angle, duration, MapView.DEFAULT_EASE)
+            else -> mapController.setTiltEased(angle, duration,  mapController.DEFAULT_EASE_TYPE)
         }
     }
 

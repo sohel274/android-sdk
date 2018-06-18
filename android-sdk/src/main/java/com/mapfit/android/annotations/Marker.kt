@@ -340,7 +340,7 @@ class Marker internal constructor(
                     latLng.lng,
                     latLng.lat,
                     duration,
-                    MapController.EaseType.CUBIC
+                    MapController.EaseType.QUART_IN_OUT
                 )
 
                 checkPositionUpdate(markerPositionSet, latLng)
